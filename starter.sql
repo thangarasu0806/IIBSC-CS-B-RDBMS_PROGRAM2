@@ -1,17 +1,16 @@
-```sql
--- Student Table Assignment
---
--- Create a table named Student with the following fields:
---
--- StudentID     - NUMBER(5)    - PRIMARY KEY
--- StudentName   - VARCHAR(20)  - NOT NULL, UNIQUE
--- DOB           - DATE         - NOT NULL
--- Gender        - VARCHAR(10)  - NOT NULL
--- DepartmentID  - NUMBER(5)    - NOT NULL
---
--- Write your CREATE TABLE statement below.
+use thangarasudb;
+CREATE TABLE student090
+(
+student090ID INT(5)PRIMARY KEY,
+student090name VARCHAR(20)NOT NULL,
+DOB DATE,
+GENDER VARCHAR(10),
+info090 INT(5),
+CONSTRAINT UQ_student090name UNIQUE(student090name),
+CONSTRAINT FK_info090id 
+    FOREIGN KEY (info090)
+	REFERENCES  info090(info090)
+);
+select*from student090;
 
-DROP TABLE IF EXISTS Student;
-
--- WRITE YOUR SQL CODE HERE
-```
+desc student090;
